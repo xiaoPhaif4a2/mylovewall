@@ -1,0 +1,17 @@
+// 覆盖 Element Plus 的主题变量（以主色为例）
+@forward "element-plus/theme-chalk/src/common/var.scss" with (
+  $colors: (
+    'primary': (
+      'base': #27ba9b, // 自定义主色
+    ),
+    // 可继续覆盖其他变量（如 success、warning 等）
+  )
+);
+
+// 导入 Element Plus 基础样式（按需，由 Resolver 自动配合 importStyle 处理）
+@use "element-plus/theme-chalk/src/index.scss" as *;
+
+*{
+    padding: 0;
+    margin: 0;
+}
